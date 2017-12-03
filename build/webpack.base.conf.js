@@ -25,7 +25,8 @@ module.exports = {
       '@': resolve('src'),
       'com': resolve('src/components'),
       'pages': resolve('src/pages'),
-      'util': resolve('src/util')
+      'util': resolve('src/util'),
+      '@pkg': path.resolve(__dirname, '../../aiedu-components/packages/')
     }
   },
   module: {

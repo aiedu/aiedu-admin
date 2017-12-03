@@ -18,11 +18,47 @@ export default new Router({
         return require(["@/pages/categroy/list"], resolve);
       }
     },
+    /**
+     * 问题
+     */
     {
-      path: '/lang/manage',
+      path: '/problem/add',
       component ( resolve ){
-        return require(["@/pages/langs/lang"], resolve);
+        return require(["@/pages/problems/main"], resolve);
       }
-    }
+    },
+    {
+      path: '/problem/edit/:id',
+      component ( resolve ){
+        return require(["@/pages/problems/main"], resolve);
+      }
+    },
+    {
+      path: '/problem/list',
+      component ( resolve ){
+        return require(["@/pages/problems/list"], resolve);
+      }
+    },
+    /**
+     * 课程
+     */
+    {
+      path: '/lesson/add',
+      component ( resolve ){
+        return require(["@/pages/lessons/main"], resolve);
+      }
+    },
+    {
+      path: '/lesson/edit/:id',
+      component ( resolve ){
+        return require(["@/pages/lessons/main"], resolve);
+      }
+    },
+    {
+      path: '/lesson/list',
+      component ( resolve ){
+        return require(["@/pages/lessons/list"], resolve);
+      }
+    },
   ]
-});
+}); 

@@ -17,8 +17,19 @@ module.exports = {
     port: 8080,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-    proxyTable: {},
+    assetsPublicPath: '/',  
+    proxyTable: {
+      '/napi': {
+        target: 'http://localhost:8080', // target host
+        changeOrigin: true,               // needed for virtual hosted sites
+        pathRewrite: {
+            '^/napi' : ''
+        },
+        router: {
+            'localhost:8080' : 'http://localhost:3000'
+        }
+      }
+    },
     cssSourceMap: false
   }
 }
